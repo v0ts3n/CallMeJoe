@@ -15,8 +15,8 @@ from bot_api_client import CallMeJoeAPI
 
 logging.basicConfig(level=logging.INFO)
 
-BOT_TOKEN = ""
-API_BASE = ""
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+API_BASE = os.getenv("API_BASE", "")
 
 bot = Bot(token=BOT_TOKEN)
 storage = MemoryStorage()
